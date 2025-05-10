@@ -1,0 +1,227 @@
+.content-blog{
+    font-family: "Montserrat-bold";
+    font-size: 24px;
+    line-height: 32px;
+    margin: 32px 0;
+}
+
+.content-pictures{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 32px 0;
+}
+.pictures__block{
+    grid-column: span 6;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 206px 1fr;
+    grid-template-areas: 
+    "pictures__img"
+    "pictures__bady";
+
+
+    box-shadow: 0px 0px 0px 1px inset #C1C5CD;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.pictures__body{
+    grid-area: pictures__bady;
+    display: flex;
+    flex-flow: column;
+    padding: 16px;
+}
+
+.pictures__body h4{
+    font-family: "Montserrat-Bold";
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.pictures__body p{
+    font-family: "Montserrat-Regular";
+    font-size: 12px;
+    line-height: 18px;
+    color: #494949;
+    padding: 8px 0;
+}
+
+.pictures__body h6{
+    font-family: "Montserrat-Regular";
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.pictures__body span{
+    font-family: "Montserrat-Regular";
+    font-size: 12px;
+    color: rgba(134, 134, 134, 1);
+    margin-top: auto;
+}
+
+.pictures__img{
+    grid-area: pictures__img;
+    display: flex;
+    width: 100%;
+    > img{
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+        border-top-right-radius: 16px;
+        border-top-left-radius: 16px;
+    }
+}
+
+    /* iPad mini */
+@media screen and (min-width: 768px) {
+    .pictures__block:nth-child(-n+3) {
+        grid-template-rows: 404px 1fr;
+    }
+
+    .pictures__block:nth-child(n+3){
+        grid-template-rows: 206px 1fr;
+        grid-column: span 3;
+    }
+}
+
+    /* iPad Pro */
+@media screen and (min-width: 1024px) {
+    .pictures__block:nth-child(-n+3){
+        grid-template-rows: 468px 1fr;
+        grid-column: span 3
+    }
+    .pictures__block:nth-child(n+3){
+        grid-template-rows: 304px 1fr;
+        grid-column: span 2;
+    }
+}
+
+    /* iPhone 11 Pro Max */
+@media screen and (max-width: 414px) {
+    .pictures__block:nth-child(n+5) {
+        display: none;
+    }
+}
+
+/* Границы поля */
+@media screen and (min-width: 1440px){
+    .content{
+        margin: 0 120px;
+        width: auto;
+    }
+    .pictures__body{
+        height: 240px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px){
+    .content{
+        margin: 0 32px;
+        width: auto;
+    }
+    .pictures__body{
+        height: 240px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .content{
+        margin: 0 20px;
+        width: auto;
+    }
+    .pictures__body{
+        height: 240px;
+    }
+}
+
+@media (min-width: 414px) and (max-width: 768px){
+    .content{
+        margin: 0 20px;
+        width: auto;
+    }
+    .pictures__body{
+        height: 196px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 414px){
+    .content{
+        margin: 0 16px;
+        width: auto;
+    }
+    .pictures__body{
+        height: 288px;
+    }
+}
+
+    /* Кнопка "Еще" */
+.btn-end{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 64px;
+}
+
+.btn-end span{
+    font-family: "Montserrat-Bold";
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.btn-end_button{
+    height: 48px;
+    width: 182px;
+    border-radius: 4px;
+    background-color: #35B3A9;
+    border: none;
+    cursor: pointer;
+}
+
+    /* Иконы на карточках */
+.card{
+    display: flex;
+    padding: 6px 8px;
+}
+
+.pictures-img__card{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin: 50px 0px 0px 8px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 0px 1px 1px #C1C5CD;
+    border-radius: 24px;
+    width: auto;
+    height: 32px;
+}
+
+.pictures-img__card a{
+    font-family: "Montserrat-Semibold";
+    color: #333333;
+    font-size: 14px;
+    padding: 0 0 0 4px;
+}
+
+.pictures__img-card{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin: 8px 0px 0px 7px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 0px 3px 1px #C1C5CD;
+    border-radius: 24px;
+    width: auto;
+    height: 32px;
+}
+
+.pictures__img-card a{
+    font-family: "Montserrat-Semibold";
+    color: #333333;
+    font-size: 14px;
+    padding: 0 0 0 4px;
+}
