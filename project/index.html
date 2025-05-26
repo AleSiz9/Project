@@ -18,7 +18,7 @@
         <div class="layout-header nav__panel">
             <img class="nav__panel-logo" src="/project/logotip/logo.svg" alt="logo">
             <div class="nav__panel-bar">
-                <input id="menu__toggle" type="checkbox" />
+                <input id="menu__toggle" type="checkbox" aria-label="button">
                 <label class="menu__btn" for="menu__toggle">
                     <span></span>
                 </label>
@@ -29,13 +29,12 @@
                     <li><a href="#">Психологам</a></li>
                     <li><a href="#">Сертификат</a></li>
                     <li><a href="#">Материалы</a></li>
-                    <li><a href="#">FAQ</a></li>    
-                    </li>
+                    <li><a href="#">FAQ</a></li>
                 </ul>
             </div>
             <div class="layout-header header__button_form">
                 <form action="button">
-                    <button class="header__button" name="button">
+                    <button class="header__button" type="button" name="button" aria-label="press">
                         <span>Подобрать психолога</span>
                     </button>
                 </form>
@@ -239,8 +238,8 @@
             <div class="footer-content__grid">
                 <div class="footer-media">
                     <nav class="footer-nav">
-                        <ul class="footer-nav__ul">
-                            <div class="footer-block">
+                        <div class="footer-nav__ul">
+                            <ul class="footer-block">
                                 <li class="footer-block__li">
                                     <a href="">О нас</a>
                                 </li>
@@ -256,8 +255,8 @@
                                 <li class="footer-block__li">
                                     <a href="">FAQ</a>
                                 </li>
-                            </div>
-                            <div class="footer-block">
+                            </ul>
+                            <ul class="footer-block">
                                 <li class="footer-block__li">
                                     <a href="">Блог</a>
                                 </li>
@@ -273,15 +272,15 @@
                                 <li class="footer-block__li">
                                     <a href="">Контакты</a>
                                 </li>
-                            </div>
-                        </ul>
+                            </ul>
+                        </div>
                     </nav>
                 </div>
                 <div class="footer-text">
                     <h4>Одно письмо в неделю со свежими новостями и акциями</h4>
                     <form class="footer-form" action="" method="post">
                         <input class="email-input" placeholder="Ваш e-mail" type="email" name="email">
-                        <button type="submit" id="submitButton"></button>
+                        <button type="submit" id="submitButton" aria-labelledby="labeldiv"></button>
                     </form>
                     <p>Подписываясь, я соглашаюсь на обработку персональных данных в соответствии с ФЗ РФ № 152-ФЗ «О персональных данных», а также с Политикой конфиденциальности</p>
                 </div>
